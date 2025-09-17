@@ -1,0 +1,147 @@
+/* ==============================
+   GENERAL STYLING
+============================== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0; padding: 0;
+  background-color: #f4f4f4;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.site-header {
+  background-color: #004080;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex; flex-direction: column; align-items: center;
+  text-align: center;
+  position: relative;
+}
+.logo-pair {
+  display: flex; justify-content: center; gap: 5px;
+  background-color: #ffffff;
+}
+.logo { height: 60px; }
+.site-title { margin: 10px 0; font-size: 25px; }
+.site-datetime { font-size: 14px; }
+
+/* Dark mode toggle button */
+/* #mode-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #9c1a1a; color: #004080;
+  border: none; border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#mode-toggle:hover {
+  background-color: #ddd;
+} */
+
+/* Main content */
+.main-container {
+  padding: 20px;
+}
+
+/* ==============================
+   FORM STYLING
+============================== */
+.form-box {
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.form-box input, .form-box select, .form-box textarea {
+  width: 100%;
+  margin: 5px 0 15px 0;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #004080;
+  color: #fff;
+  border: none; border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-box button:hover { background-color: #0066cc; }
+
+.small-links { text-align: center; font-size: 14px; }
+.message { color: red; font-weight: bold; }
+
+.hidden { display: none; }
+
+/* ==============================
+   DASHBOARD STYLING
+============================== */
+.dashboard-staff {
+  background:#fff;
+  padding:15px;
+  border-radius:8px;
+  margin-bottom:20px;
+  box-shadow:0 0 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.dashboard-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.box {
+  background:#fff;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 0 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.box h3 { margin-top:0; }
+textarea { resize: vertical; min-height:50px; }
+
+/* ==============================
+   DARK MODE
+============================== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+body.dark-mode .site-header {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+body.dark-mode #mode-toggle {
+  background: #004080;
+  color: #fff;
+}
+body.dark-mode #mode-toggle:hover {
+  background: #0066cc;
+}
+body.dark-mode .form-box,
+body.dark-mode .dashboard-staff,
+body.dark-mode .box {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+body.dark-mode input, 
+body.dark-mode select, 
+body.dark-mode textarea {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+body.dark-mode button {
+  background-color: #004080;
+  color: #fff;
+}
+body.dark-mode button:hover {
+  background-color: #0066cc;
+}

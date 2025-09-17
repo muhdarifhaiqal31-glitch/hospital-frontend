@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine's Real-Time Localisation — Login/Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-pair">
+      <img class="logo logo-umpsa" src="https://umpsa.edu.my/img/logo-umpsa.png" alt="UMPSA Logo">
+      <img class="logo logo-kkm" src="https://www.google.com/imgres?q=kkm&imgurl=https%3A%2F%2Fjknsarawak.moh.gov.my%2Fhkanowit%2Fwp-content%2Fuploads%2F2019%2F11%2Flogo_baru_kkm-download.jpg&imgrefurl=https%3A%2F%2Fjknsarawak.moh.gov.my%2Fhkanowit%2Flogo-kkm%2F&docid=oBavBft2o1BWNM&tbnid=qSVF5btqqHL-2M&vet=12ahUKEwjk192Wwt2PAxV8yDgGHbRrALMQM3oECBAQAA..i&w=758&h=758&hcb=2&ved=2ahUKEwjk192Wwt2PAxV8yDgGHbRrALMQM3oECBAQAA" alt="KKM Logo">
+    </div>
+    <h1 class="site-title">Machine's Real-Time Localisation</h1>
+    <div class="site-datetime" id="siteDateTime">Loading date & time...</div>
+  </header>
+
+  <main class="main-container">
+    <div class="form-box login-box">
+      <h2>Staff Login</h2>
+      <input type="text" id="loginStaffId" placeholder="Staff ID">
+      <input type="password" id="loginPassword" placeholder="Password">
+      <button onclick="doLogin()">Login</button>
+      <p class="small-links">
+        <a href="#" onclick="showRegister()">Register</a> |
+        <a href="#" onclick="showForgot()">Forgot Password?</a>
+      </p>
+      <p class="message" id="msgLogin"></p>
+    </div>
+
+    <div class="form-box register-box hidden" id="registerBox">
+      <h2>Register New Staff</h2>
+      <input type="text" id="regStaffId" placeholder="Staff ID">
+      <input type="text" id="regName" placeholder="Full Name">
+      <input type="email" id="regEmail" placeholder="Email">
+      <input type="text" id="regPhone" placeholder="Phone Number">
+      <input type="password" id="regPassword" placeholder="Password">
+      <label>Security Question 1</label>
+      <select id="regQ1">
+        <option value="color">Favorite color</option>
+        <option value="pet">Pet's name</option>
+        <option value="school">Primary school</option>
+      </select>
+      <input type="text" id="regA1" placeholder="Answer 1">
+      <label>Security Question 2</label>
+      <select id="regQ2">
+        <option value="mother">Mother's maiden name</option>
+        <option value="city">City born</option>
+        <option value="food">Favorite food</option>
+      </select>
+      <input type="text" id="regA2" placeholder="Answer 2">
+      <button onclick="doRegister()">Submit</button>
+      <p class="small-links">
+        <a href="#" onclick="showLogin()">Back to Login</a>
+      </p>
+      <p class="message" id="msgRegister"></p>
+    </div>
+
+    <div class="form-box forgot-box hidden" id="forgotBox">
+      <h2>Forgot Password</h2>
+      <input type="text" id="forgotStaffId" placeholder="Staff ID">
+      <label>Choose Question</label>
+      <select id="forgotQno">
+        <option value="1">Question 1</option>
+        <option value="2">Question 2</option>
+      </select>
+      <input type="text" id="forgotAnswer" placeholder="Answer">
+      <input type="password" id="forgotNewPassword" placeholder="New Password">
+      <button onclick="doForgot()">Reset Password</button>
+      <p class="small-links">
+        <a href="#" onclick="showLogin()">Back to Login</a>
+      </p>
+      <p class="message" id="msgForgot"></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
